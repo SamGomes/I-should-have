@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Object/ObjectAttribute/Draggable.gd" type="Script" id=5]
+[ext_resource path="res://Textures/blank.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/AnimationSelfStart.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48.6426, 43.2793 )
@@ -34,6 +36,34 @@ extents = Vector2( 138.615, 93.3678 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 136.643, 89.3722 )
 
+[sub_resource type="Animation" id=5]
+resource_name = "Animation"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
 [node name="Hallway" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -49,6 +79,7 @@ input_pickable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+zoom = Vector2( 0.925, 0.925 )
 limit_left = 0
 limit_right = 2800
 limit_bottom = 800
@@ -93,5 +124,15 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TESTE/PaintingCollision"]
 shape = SubResource( 4 )
+
+[node name="Fade" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/Animation = SubResource( 5 )
+script = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 0.505 )
+position = Vector2( 0, -10.5485 )
+texture = ExtResource( 6 )
 [connection signal="body_entered" from="Quadro 1/PaintingCollision" to="Player" method="_on_passage_to_1_0_0"]
 [connection signal="body_entered" from="TESTE/PaintingCollision" to="Player" method="_on_teste_body_entered"]
