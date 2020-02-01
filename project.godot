@@ -19,6 +19,10 @@ config/name="platformer"
 run/main_scene="res://Scenes/GameManager.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameManager="*res://Scripts/GameManager.gd"
+
 [input]
 
 move_left={

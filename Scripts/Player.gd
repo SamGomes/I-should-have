@@ -50,3 +50,12 @@ func play_anim(anim_name):
 	if anim_player.is_playing() and anim_player.current_animation == anim_name:
 		return
 	anim_player.play(anim_name)
+
+
+
+
+func _on_QuadroCollision_body_entered(body):
+	if body.name == "Player":
+		queue_free()
+		GameManager.changeMemory(1,0)
+	

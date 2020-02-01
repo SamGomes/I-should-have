@@ -3,7 +3,7 @@
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 
-[node name="Hallway" type="Node2D"]
+[node name="Level1_search" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

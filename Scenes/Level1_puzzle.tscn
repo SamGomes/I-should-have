@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 
-[node name="Hallway" type="Node2D"]
+[node name="Level1_puzzle" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -27,22 +26,10 @@ limit_bottom = 800
 position = Vector2( 558.729, 613.525 )
 scale = Vector2( 0.4, 0.96 )
 
-[node name="Sprite" type="Sprite" parent="Quadro 1 "]
-position = Vector2( 887.866, 1.20197 )
-texture = ExtResource( 2 )
-
 [node name="Quadro 2" type="Node2D" parent="."]
 position = Vector2( 558.729, 613.525 )
 scale = Vector2( 0.4, 0.96 )
 
-[node name="Sprite" type="Sprite" parent="Quadro 2"]
-position = Vector2( 2526.72, 3.401 )
-texture = ExtResource( 2 )
-
 [node name="Quadro 3" type="Node2D" parent="."]
 position = Vector2( 558.729, 613.525 )
 scale = Vector2( 0.4, 0.96 )
-
-[node name="Sprite" type="Sprite" parent="Quadro 3"]
-position = Vector2( 4184.73, 6.64172 )
-texture = ExtResource( 2 )
