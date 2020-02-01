@@ -19,7 +19,7 @@ var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
-	lim = 9
+	lim = rng.randf_range(9.0, 13.0)
 	mover = rng.randf_range(1.0, 5.0)
 	initPosition = position
 
@@ -33,3 +33,4 @@ func _process(delta):
 		position = initPosition
 		life=0	
 		mover = rng.randf_range(1.0, 5.0)
+		lim = rng.randf_range(9.0, 13.0)

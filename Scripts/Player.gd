@@ -60,7 +60,9 @@ func _on_passage_to_1_1_0(body):
 	if body.name == "Player":
 		GameManager.changeMemory(1,1,0)
 	
-func _on_passage_to_1_1_1(body):
+
+func _on_passage_1_2_0(body):
 	if body.name == "Player":
-		GameManager.changeMemory(1,1,1)
-	
+		GameManager.changeMemory(1,2,0)
+
+
