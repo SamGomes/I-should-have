@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Textures/test_texture.png" type="Texture" id=1]
 [ext_resource path="res://Textures/test_texture2.png" type="Texture" id=2]
@@ -10,11 +10,13 @@
 [ext_resource path="res://Textures/Minigame/Asset 6.png" type="Texture" id=8]
 [ext_resource path="res://Textures/Minigame/Asset 9.png" type="Texture" id=9]
 [ext_resource path="res://Textures/Minigame/Asset 8.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Minigame1.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 101.138, 76.2399 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Minigame1" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="test_texture2" type="Sprite" parent="."]
 position = Vector2( 2363.98, 1044.34 )
@@ -106,3 +108,76 @@ texture = ExtResource( 9 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kine6"]
 polygon = PoolVector2Array( 947.183, 274.763, 952.046, 102.388, 914.761, 147.238, 879.638, 109.413, 858.564, 182.902, 850.999, 126.164, 788.317, 190.467, 789.398, 146.698, 721.853, 241.801, 820.198, 275.303 )
+
+[node name="CorrectPlaces" type="Area2D" parent="."]
+
+[node name="P1C" type="KinematicBody2D" parent="CorrectPlaces"]
+
+[node name="Piece1" type="Sprite" parent="CorrectPlaces/P1C"]
+visible = false
+position = Vector2( 516.854, 291.24 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorrectPlaces/P1C"]
+polygon = PoolVector2Array( 342.102, 63.4457, 573.594, 63.4457, 538.441, 96.8834, 523.866, 142.324, 452.704, 150.041, 483.569, 179.191, 442.415, 185.193, 383.256, 303.511, 355.82, 287.221, 344.674, 348.952 )
+
+[node name="P2C" type="KinematicBody2D" parent="CorrectPlaces"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorrectPlaces/P2C"]
+position = Vector2( 259.013, 201.183 )
+polygon = PoolVector2Array( 85.9886, 311.132, 86.502, 150.97, 99.3355, 87.3152, 125.003, 105.282, 156.317, 20.5807, 179.417, 38.5477, 178.904, 91.4219, 231.778, 60.1081, 202.517, 152.51, 176.337, 184.85, 209.704, 184.85, 155.803, 225.404, 240.505, 225.918, 206.111, 278.792, 326.233, 313.186 )
+
+[node name="Piece2" type="Sprite" parent="CorrectPlaces/P2C"]
+visible = false
+position = Vector2( 520.849, 287.294 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="P3C" type="KinematicBody2D" parent="CorrectPlaces"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorrectPlaces/P3C"]
+position = Vector2( 335.762, -68.9917 )
+polygon = PoolVector2Array( 350.068, 131.42, 351.458, 365.382, 319.954, 339.438, 267.139, 370.015, 209.691, 315.81, 262.97, 272.724, 199.499, 255.582, 249.071, 177.286, 211.081, 196.744, 237.025, 132.347 )
+
+[node name="Piece3" type="Sprite" parent="CorrectPlaces/P3C"]
+visible = false
+position = Vector2( 512.156, 289.451 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="P4C" type="KinematicBody2D" parent="CorrectPlaces"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorrectPlaces/P4C"]
+position = Vector2( -364.899, -189.78 )
+polygon = PoolVector2Array( 866.318, 498.939, 824.224, 553.867, 851.431, 453.252, 803.177, 485.592, 808.824, 378.304, 847.324, 369.064, 816.524, 338.263, 891.985, 334.156, 904.819, 287.956, 939.726, 253.048, 919.192, 314.649, 956.153, 294.629, 912.005, 374.197, 968.986, 391.651, 917.652, 434.771, 961.286, 476.352, 907.385, 518.446 )
+
+[node name="Piece4" type="Sprite" parent="CorrectPlaces/P4C"]
+visible = false
+position = Vector2( 516.465, 284.759 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="P5C" type="KinematicBody2D" parent="CorrectPlaces"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorrectPlaces/P5C"]
+position = Vector2( 185.707, -98.5552 )
+polygon = PoolVector2Array( 467.9, 369.874, 502.294, 395.028, 503.32, 443.282, 467.9, 487.943, 431.966, 446.362, 413.486, 523.364, 404.245, 467.409, 341.104, 531.064, 343.671, 485.89, 312.357, 528.497, 226.629, 527.984, 281.043, 483.836, 244.596, 483.323, 272.83, 458.169, 314.411, 407.862, 352.398, 428.909, 401.165, 389.895, 420.159, 399.648 )
+
+[node name="Piece5" type="Sprite" parent="CorrectPlaces/P5C"]
+visible = false
+position = Vector2( 518.612, 286.957 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="P6C" type="KinematicBody2D" parent="CorrectPlaces"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorrectPlaces/P6C"]
+position = Vector2( -261.198, 239.279 )
+polygon = PoolVector2Array( 947.183, 274.763, 952.046, 102.388, 914.761, 147.238, 879.638, 109.413, 858.564, 182.902, 850.999, 126.164, 788.317, 190.467, 789.398, 146.698, 721.853, 241.801, 820.198, 275.303 )
+
+[node name="Piece6" type="Sprite" parent="CorrectPlaces/P6C"]
+visible = false
+position = Vector2( 516.385, 290.471 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
