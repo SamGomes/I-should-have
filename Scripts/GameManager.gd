@@ -4,19 +4,21 @@ var memories = [] #List<List<ScenePath>>
 
 var currMemory
 
+var papers = 0
+var papersMax = 6
+
+var bolota = false 
+var perola = false 
 
 func _ready():
-	
 	var submemories_l1_search = []
 	submemories_l1_search.append("res://Scenes/Level1/Level1_search_0.tscn")
 	submemories_l1_search.append("res://Scenes/Level1/Level1_search_1.tscn")
-	submemories_l1_search.append("res://Scenes/Level1/Level1_search_2.tscn")
-	
+	submemories_l1_search.append("res://Scenes/Level1/Level1_search_2.tscn")	
 	memories.append([["res://Scenes/Hallway.tscn"],[]])
 	memories.append([submemories_l1_search,["res://Scenes/Level1/Level1_puzzle.tscn"]])
 #	memories.append(["res://Scenes/Level2_search.tscn","res://Scenes/Level2_puzzle.tscn"])
 #	memories.append(["res://Scenes/Level3_search.tscn","res://Scenes/Level3_puzzle.tscn"])
-
 	changeMemory(0,0,0)
 
 
@@ -29,3 +31,11 @@ func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
 
 func changeTeste():
 	get_tree().change_scene("res://Scenes/Level1/Minigame1.tscn")
+
+
+		
+	
+	
+	
+	
+	

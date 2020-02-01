@@ -41,10 +41,10 @@ position = Vector2( 12.5347, -940.874 )
 scale = Vector2( 2, 1 )
 shape = SubResource( 1 )
 
-[node name="Paper" type="Node2D" parent="."]
+[node name="Paper1" type="Node2D" parent="."]
 position = Vector2( 649.856, 659.628 )
 scale = Vector2( 0.865649, 0.857378 )
 
-[node name="Sprite" type="Sprite" parent="Paper"]
+[node name="Sprite" type="Sprite" parent="Paper1"]
 texture = ExtResource( 3 )
 [connection signal="body_entered" from="Passagem_main_to_1/Passagem_main_to_1" to="Player" method="_on_passage_to_1_1_0"]

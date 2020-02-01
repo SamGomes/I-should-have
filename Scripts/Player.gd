@@ -65,4 +65,12 @@ func _on_passage_1_2_0(body):
 		GameManager.changeMemory(1,2,0)
 
 func _on_teste_body_entered(body):
-	GameManager.changeTeste()
+	if body.name == "Player":
+		GameManager.changeTeste()
+
+#func _on_paper_player(body):
+#	if body.name == "Player":
+#		GameManager.keys=GameManager.keys+1
+#
+
+
