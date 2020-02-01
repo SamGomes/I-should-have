@@ -3,6 +3,8 @@
 [ext_resource path="res://Scripts/Object/ObjectAttribute/Draggable.gd" type="Script" id=1]
 [ext_resource path="res://platformer_tiles.png" type="Texture" id=2]
 
+
+
 [node name="Object" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
