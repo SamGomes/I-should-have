@@ -13,7 +13,7 @@ func _ready():
 
 func changeMemory(levelNum, type): #type=> 0:search, 1:puzzle
 	currMemory = memories[levelNum][type]
-	queue_free()
+#	queue_free()
 	var scene = load(currMemory).instance()
 	add_child(scene)
 	
