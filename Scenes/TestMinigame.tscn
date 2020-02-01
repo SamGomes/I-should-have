@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Textures/test_texture2.png" type="Texture" id=1]
 [ext_resource path="res://Textures/test_texture.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Piece1.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Piece1.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 100.044, 75.7526 )
