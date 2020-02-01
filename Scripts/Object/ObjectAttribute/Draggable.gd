@@ -1,10 +1,12 @@
-extends Node2D
+extends KinematicBody2D
 
-class Draggable:
-	var target
-	func _init(target):
-		self.target = target
+var drag_enabled = false
+var movement
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT:
+			drag_enabled = event.pressed
 	
-	func input(event):
-		if event.type == InputEvent.MOUSE_BUTTON:
-			self.target.set_global_pos(self.target.get_global_mouse_pos())
+	if drag_enabled:
+		set_position(get_global_mouse_position())
