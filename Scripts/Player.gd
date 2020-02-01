@@ -68,9 +68,12 @@ func _on_teste_body_entered(body):
 	if body.name == "Player":
 		GameManager.changeTeste()
 
-#func _on_paper_player(body):
-#	if body.name == "Player":
-#		GameManager.keys=GameManager.keys+1
 #
+#func _on_Paper1_Player(body):
+#	if body.name == "Player":
+#		GameManager.getPaper(get_class() )
 
 
+func _on_Paper1_body_entered(body):
+	if body.name == "Player":
+		GameManager.getPaper1()

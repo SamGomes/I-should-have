@@ -32,7 +32,9 @@ func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
 func changeTeste():
 	get_tree().change_scene("res://Scenes/Level1/Minigame1.tscn")
 
-
+#func getPaper1():
+#	papers=papers+1
+#	get_node("Paper1").queue_free() 
 		
 	
 	

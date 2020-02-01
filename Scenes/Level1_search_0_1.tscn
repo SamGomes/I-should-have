@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.2336, 1054.39 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 [node name="Level1_search_main" type="Node2D"]
 __meta__ = {
@@ -36,15 +38,20 @@ position = Vector2( 6000, 600 )
 [node name="Passagem_main_to_1" type="Area2D" parent="Passagem_main_to_1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Passagem_main_to_1/Passagem_main_to_1"]
-visible = false
 position = Vector2( 12.5347, -940.874 )
 scale = Vector2( 2, 1 )
 shape = SubResource( 1 )
 
 [node name="Paper1" type="Node2D" parent="."]
-position = Vector2( 649.856, 659.628 )
-scale = Vector2( 0.865649, 0.857378 )
+position = Vector2( 587.449, 661.181 )
+
+[node name="Paper1" type="Area2D" parent="Paper1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paper1/Paper1"]
+scale = Vector2( 5.16025, 5.13714 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Paper1"]
 texture = ExtResource( 3 )
 [connection signal="body_entered" from="Passagem_main_to_1/Passagem_main_to_1" to="Player" method="_on_passage_to_1_1_0"]
+[connection signal="body_entered" from="Paper1/Paper1" to="Player" method="_on_Paper1_body_entered"]
