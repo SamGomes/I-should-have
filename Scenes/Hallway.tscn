@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=2]
+
+[gd_scene load_steps=7 format=2]
+
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://Scripts/Object/ObjectAttribute/Draggable.gd" type="Script" id=5]
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 48.6426, 43.2793 )
+[ext_resource path="res://Scenes/Paper1.tscn" type="PackedScene" id=4]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -92,6 +90,9 @@ texture = ExtResource( 2 )
 [node name="PaintingCollision" type="Area2D" parent="TESTE"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TESTE/PaintingCollision"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
+
+[node name="Paper1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 530.53, 665.833 )
 [connection signal="body_entered" from="Quadro 1/PaintingCollision" to="Player" method="_on_passage_to_1_0_0"]
 [connection signal="body_entered" from="TESTE/PaintingCollision" to="Player" method="_on_teste_body_entered"]

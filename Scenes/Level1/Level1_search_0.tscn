@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.2336, 1054.39 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 51.0229, 47.3201 )
 
 [node name="Level1_search_0" type="Node2D"]
 __meta__ = {
@@ -38,4 +42,16 @@ position = Vector2( 6000, 600 )
 position = Vector2( 12.5347, -940.874 )
 scale = Vector2( 2, 1 )
 shape = SubResource( 1 )
+
+[node name="Paper1" type="Node2D" parent="."]
+position = Vector2( 601.501, 659.075 )
+
+[node name="Sprite" type="Sprite" parent="Paper1"]
+texture = ExtResource( 3 )
+
+[node name="Paper1" type="Area2D" parent="Paper1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paper1/Paper1"]
+shape = SubResource( 2 )
 [connection signal="body_entered" from="Passagem_main_to_1/Passagem_main_to_1" to="Player" method="_on_passage_to_1_1_0"]
+[connection signal="body_entered" from="Paper1/Paper1" to="Player" method="_on_Paper1_body_entered"]
