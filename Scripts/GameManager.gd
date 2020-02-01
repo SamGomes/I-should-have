@@ -1,8 +1,10 @@
 extends Node2D
 
 var memories = [] #List<List<ScenePath>>
-
 var currMemory
+
+var pieces = [] # list of objects
+var keys = [] # list of objects
 
 func _ready():
 	
@@ -16,9 +18,11 @@ func _ready():
 #	memories.append(["res://Scenes/Level2_search.tscn","res://Scenes/Level2_puzzle.tscn"])
 #	memories.append(["res://Scenes/Level3_search.tscn","res://Scenes/Level3_puzzle.tscn"])
 
-	changeMemory(0,0,0)
-	
+	loadStartMenu()
 
+
+func loadStartMenu():
+	get_tree().change_scene("res://Scenes/StartScene.tscn")
 
 func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
 	currMemory = memories[levelNum][type][levelPart]
@@ -27,3 +31,5 @@ func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
 #	add_child(scene)
 	get_tree().change_scene(currMemory)	
 
+func changeTeste():
+	get_tree().change_scene("res://Scenes/Level1/Minigame1.tscn")

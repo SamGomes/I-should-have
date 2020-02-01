@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.2336, 1054.39 )
 
-[node name="Level1_search_main" type="Node2D"]
+[node name="Level1_search_0" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }

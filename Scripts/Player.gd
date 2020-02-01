@@ -53,14 +53,19 @@ func play_anim(anim_name):
 	
 
 func _on_passage_to_1_0_0(body):
-	if body.name == "Player":
-		GameManager.changeMemory(1,0,0)
+	GameManager.changeMemory(1,0,0)
 		
 func _on_passage_to_1_1_0(body):
-	if body.name == "Player":
-		GameManager.changeMemory(1,1,0)
+	GameManager.changeMemory(1,1,0)
 	
-func _on_passage_to_1_1_1(body):
-	if body.name == "Player":
-		GameManager.changeMemory(1,1,1)
+func _on_passage_1_2_0(body):
+	GameManager.changeMemory(1,2,0)
+
+func _on_passage_to_0_0_0(area):
+	GameManager.changeMemory(0,0,0)
 	
+
+func _on_teste_body_entered(body):
+	GameManager.changeTeste()
+
+
