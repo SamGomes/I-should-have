@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/RiverLog.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=6]
+[ext_resource path="res://Scripts/RiverLog.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27.439, 829.501 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1953.58, 75.577 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 137.357, 90.3574 )
 
 [node name="Level1_search_1" type="Node2D"]
 
@@ -56,7 +60,17 @@ position = Vector2( 3583.92, 965.91 )
 position = Vector2( -30.0825, 2.00537 )
 shape = SubResource( 2 )
 
-[node name="RiverLog" parent="." instance=ExtResource( 2 )]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 1900.17, 692.947 )
+scale = Vector2( 1, 0.125 )
+motion/sync_to_physics = true
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 6 )
 [connection signal="body_entered" from="Passage_1_to_main/Passage_1_to_main" to="Player" method="_on_passage_to_1_0_0"]
 [connection signal="body_entered" from="Passage_1_to_2/Passage_1_to_2" to="Player" method="_on_passage_to_1_1_1"]
 [connection signal="body_entered" from="River/River" to="Player" method="_on_passage_to_1_1_0"]

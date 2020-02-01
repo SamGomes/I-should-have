@@ -50,39 +50,17 @@ func play_anim(anim_name):
 	if anim_player.is_playing() and anim_player.current_animation == anim_name:
 		return
 	anim_player.play(anim_name)
-
-
-
-
-func _on_QuadroCollision_body_entered(body):
-	if body.name == "Player":
-		GameManager.changeMemory(1,0)
 	
 
-
-
-func _on_Passagem_main_to_1_body_entered(body):
+func _on_passage_to_1_0_0(body):
 	if body.name == "Player":
-		GameManager.changeSubMemory(1)
+		GameManager.changeMemory(1,0,0)
+		
+func _on_passage_to_1_1_0(body):
+	if body.name == "Player":
+		GameManager.changeMemory(1,1,0)
 	
-
-
-func _on_Passagem_1_to_main_body_entered(body):
+func _on_passage_to_1_1_1(body):
 	if body.name == "Player":
-		GameManager.changeSubMemory(0)
-		position = Vector2(6000, 600)
-
-
-func _on_Passagem_1_to_2_body_entered(body):
-	if body.name == "Player":
-		GameManager.changeSubMemory(2)
-
-
-func _on_Passagem_2_to_1_body_entered(body):
-	if body.name == "Player":
-		GameManager.changeSubMemory(1)
-
-
-func _on_Rio_body_entered(body):
-	if body.name == "Player":
-		GameManager.changeSubMemory(1)
+		GameManager.changeMemory(1,1,1)
+	
