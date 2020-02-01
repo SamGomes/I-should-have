@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Textures/test_texture.png" type="Texture" id=1]
+[ext_resource path="res://Textures/test_texture2.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Object/ObjectAttribute/Draggable.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="test_texture2" type="Sprite" parent="."]
+position = Vector2( 512.368, 298.895 )
+texture = ExtResource( 2 )
+
+[node name="PuzzleElement1" type="KinematicBody2D" parent="test_texture2"]
+input_pickable = true
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="test_texture2/PuzzleElement1"]
+texture = ExtResource( 1 )
