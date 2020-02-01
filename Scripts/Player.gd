@@ -56,6 +56,33 @@ func play_anim(anim_name):
 
 func _on_QuadroCollision_body_entered(body):
 	if body.name == "Player":
-		queue_free()
 		GameManager.changeMemory(1,0)
 	
+
+
+
+func _on_Passagem_main_to_1_body_entered(body):
+	if body.name == "Player":
+		GameManager.changeSubMemory(1)
+	
+
+
+func _on_Passagem_1_to_main_body_entered(body):
+	if body.name == "Player":
+		GameManager.changeSubMemory(0)
+		position = Vector2(6000, 600)
+
+
+func _on_Passagem_1_to_2_body_entered(body):
+	if body.name == "Player":
+		GameManager.changeSubMemory(2)
+
+
+func _on_Passagem_2_to_1_body_entered(body):
+	if body.name == "Player":
+		GameManager.changeSubMemory(1)
+
+
+func _on_Rio_body_entered(body):
+	if body.name == "Player":
+		GameManager.changeSubMemory(1)
