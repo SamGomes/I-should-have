@@ -1,12 +1,11 @@
 extends KinematicBody2D
 
-const MOVE_SPEED = 500
-const JUMP_FORCE = 1000
-const GRAVITY = 50
-const MAX_FALL_SPEED = 1000
+const MOVE_SPEED = 300
+const JUMP_FORCE = 800
+const GRAVITY = 20
+const MAX_FALL_SPEED = 400
 
-onready var anim_player = $AnimationPlayer
-onready var sprite = $Sprite
+onready var sprite = $AnimatedSprite
 
 var y_velo = 0
 var facing_right = false
@@ -47,9 +46,9 @@ func flip():
 	sprite.flip_h = !sprite.flip_h
 
 func play_anim(anim_name):
-	if anim_player.is_playing() and anim_player.current_animation == anim_name:
+	if sprite.is_playing() and sprite.get_animation() == anim_name:
 		return
-	anim_player.play(anim_name)
+	sprite.play(anim_name)
 	
 
 func _on_passage_to_1_0_0(body):
