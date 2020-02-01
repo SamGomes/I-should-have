@@ -125,7 +125,7 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TESTE/PaintingCollision"]
 shape = SubResource( 4 )
 
-[node name="Fade" type="AnimationPlayer" parent="."]
+[node name="Cutscene" type="AnimationPlayer" parent="."]
 method_call_mode = 1
 anims/Animation = SubResource( 5 )
 script = ExtResource( 7 )
