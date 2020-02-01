@@ -3,12 +3,11 @@
 [ext_resource path="res://Scripts/Object/ObjectAttribute/Draggable.gd" type="Script" id=1]
 [ext_resource path="res://platformer_tiles.png" type="Texture" id=2]
 
-
-
 [node name="Object" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 643.555, 512.314 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

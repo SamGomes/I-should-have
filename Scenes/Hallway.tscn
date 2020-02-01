@@ -1,6 +1,4 @@
-
 [gd_scene load_steps=7 format=2]
-
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
@@ -27,10 +25,7 @@ func _ready():
 "
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 138.615, 93.3678 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 136.643, 89.3722 )
+extents = Vector2( 136.037, 91.5957 )
 
 [node name="Hallway" type="Node2D"]
 
@@ -51,20 +46,6 @@ limit_left = 0
 limit_right = 2800
 limit_bottom = 800
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2( 781.259, 668.479 )
-
-[node name="Sprite" type="Sprite" parent="Node2D"]
-texture = ExtResource( 4 )
-
-[node name="Area2D" type="KinematicBody2D" parent="Node2D"]
-position = Vector2( -0.773804, -6.10352e-05 )
-input_pickable = true
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
-shape = SubResource( 4 )
-
 [node name="Quadro 1" type="Node2D" parent="."]
 position = Vector2( 963.258, 613.525 )
 scale = Vector2( 0.45, 1 )
@@ -76,7 +57,6 @@ texture = ExtResource( 2 )
 [node name="PaintingCollision" type="Area2D" parent="Quadro 1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Quadro 1/PaintingCollision"]
-position = Vector2( 1.6333, 1.47021 )
 shape = SubResource( 2 )
 
 [node name="TESTE" type="Node2D" parent="."]

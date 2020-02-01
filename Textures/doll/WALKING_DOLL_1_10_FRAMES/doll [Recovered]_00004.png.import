@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/desenho-inteiro-01.png-b170a7431b918de4a0088886d26451df.stex"
+path="res://.import/doll [Recovered]_00004.png-e3b42540fa22d6a588fade31983f7ef8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Minigame/desenho-inteiro-01.png"
-dest_files=[ "res://.import/desenho-inteiro-01.png-b170a7431b918de4a0088886d26451df.stex" ]
+source_file="res://Textures/doll/WALKING_DOLL_1_10_FRAMES/doll [Recovered]_00004.png"
+dest_files=[ "res://.import/doll [Recovered]_00004.png-e3b42540fa22d6a588fade31983f7ef8.stex" ]
 
 [params]
 
