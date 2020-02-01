@@ -2,6 +2,7 @@
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
+
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Quadro1.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/QuadroKinematic.gd" type="Script" id=5]
@@ -41,3 +42,4 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Quadro 1 /QuadroKinematic"]
 shape = SubResource( 1 )
+
