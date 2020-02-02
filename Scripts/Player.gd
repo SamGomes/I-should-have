@@ -70,11 +70,12 @@ func _on_passage(body):
 
 # for hallway scene
 func _on_painting_mouse_enter():
-	print(get_path())
-	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(0.0,0.0,0.0)
+	var currPainting = get_node(NodePath("/root/Hallway/Background/Frame8/Sprite"))
+	currPainting.modulate = Color(0.0,0.0,0.0)
 		
 func _on_painting_mouse_leave():
-	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(1.0,1.0,1.0)
+	var currPainting = get_node(NodePath("/root/Hallway/Background/Frame8/Sprite"))
+	currPainting.modulate = Color(1.0,1.0,1.0)
 		
 func _on_painting_mouse_click(viewport, event, idx): 
 	if (inputEnabled && event.is_pressed() and event.button_index == BUTTON_LEFT):

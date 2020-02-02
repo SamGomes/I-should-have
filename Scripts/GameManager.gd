@@ -18,7 +18,7 @@ func initPieces():
 	piece5_collected = false
 	piece6_collected = false
 
-func _process(delta):
+func _process(_delta):
 	#Function to load puzzle scene
 	if all_pieces_collected():
 		print("Colected ALL pieces!")
@@ -31,8 +31,8 @@ func _ready():
 
 func loadStartMenu():
 #	get_tree().change_scene("res://Scenes/StartScene.tscn")
-	currLevelNum = 1
-	get_tree().change_scene("res://Scenes/Level1/Level1_search_0.tscn")
+#	currLevelNum = 3
+	get_tree().change_scene("res://Scenes/Level1/Level1_puzzle_0.tscn")
 #	return get_tree().change_scene("res://Scenes/EndScene.tscn")
 
 func changeMemory():
@@ -42,9 +42,6 @@ func changeMemory():
 func changeTeste():
 	get_tree().change_scene("res://Scenes/Level1/Minigame1.tscn")
 
-
 	
 func all_pieces_collected():
 	return (piece1_collected && piece2_collected && piece3_collected && piece4_collected && piece5_collected && piece6_collected)
-	
-	

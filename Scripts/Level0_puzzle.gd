@@ -1,6 +1,5 @@
 extends Node2D
 
-var DEBUG = false
 var LOGIC_REFRESH_RATE = 3 #Check only every x frames.
 var frame_counter = 0
 
@@ -42,8 +41,6 @@ func _process(delta):
 		#print(piece_1_correct.distance_to(piece_1))		
 		if (piece_1_correct.distance_to(piece_1) < acceptance_threshold):
 			piece_1_in_place = true
-			if DEBUG:
-				print("Piece 1 in place!")
 		else:
 			piece_1_in_place = false
 			
@@ -51,8 +48,6 @@ func _process(delta):
 		#print(piece_2_correct.distance_to(piece_2))		
 		if (piece_2_correct.distance_to(piece_2) < acceptance_threshold):
 			piece_2_in_place = true
-			if DEBUG:
-				print("Piece 2 in place!")
 		else:
 			piece_2_in_place = false
 #		
@@ -60,8 +55,6 @@ func _process(delta):
 		#print(piece_3_correct.distance_to(piece_3))		
 		if (piece_3_correct.distance_to(piece_3) < acceptance_threshold):
 			piece_3_in_place = true
-			if DEBUG:
-				print("Piece 3 in place!")
 		else:
 			piece_3_in_place = false
 
@@ -69,8 +62,6 @@ func _process(delta):
 		#print(piece_4_correct.distance_to(piece_4))		
 		if (piece_4_correct.distance_to(piece_4) < acceptance_threshold):
 			piece_4_in_place = true
-			if DEBUG:
-				print("Piece 4 in place!")
 		else:
 			piece_4_in_place = false
 			
@@ -78,8 +69,6 @@ func _process(delta):
 		#print(piece_5_correct.distance_to(piece_5))		
 		if (piece_5_correct.distance_to(piece_5) < acceptance_threshold):
 			piece_5_in_place = true
-			if DEBUG:
-				print("Piece 5 in place!")
 		else:
 			piece_5_in_place = false
 			
@@ -87,16 +76,13 @@ func _process(delta):
 		#print(piece_6_correct.distance_to(piece_6))		
 		if (piece_6_correct.distance_to(piece_6) < acceptance_threshold):
 			piece_6_in_place = true
-			if DEBUG:
-				print("Piece 6 in place!")
 		else:
 			piece_6_in_place = false
 			
 		frame_counter = 0
 		
 		if (all_pieces_in_place()):
-			if DEBUG:
-				print("!!!!!!!!!!!!!!!!!YOU HAVE WON!!!!!!!!!!!!!!")
+			GameManager.changeMemory()
 		
 func all_pieces_in_place():
 	return (piece_1_in_place && piece_2_in_place && piece_3_in_place && piece_4_in_place && piece_5_in_place && piece_6_in_place)
