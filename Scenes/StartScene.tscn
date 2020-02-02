@@ -148,4 +148,5 @@ rotation = -1.57081
 scale = Vector2( 1.96508, 15.7147 )
 z_index = -1
 texture = ExtResource( 4 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_start_trigger_enter"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_start_trigger_enter"]
