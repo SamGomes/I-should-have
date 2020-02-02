@@ -7,8 +7,10 @@ const MAX_FALL_SPEED = 400
 
 onready var sprite = $AnimatedSprite
 
+
 var y_velo = 0
 var facing_right = false
+
 
 func _physics_process(delta):
 	var move_dir = 0
@@ -72,12 +74,8 @@ func _on_teste_body_entered(body):
 	if body.name == "Player":
 		GameManager.changeTeste()
 
-#
-#func _on_Paper1_Player(body):
-#	if body.name == "Player":
-#		GameManager.getPaper(get_class() )
 
 
-func _on_Paper1_body_entered(body):
-	if body.name == "Player":
-		GameManager.getPaper1()
+
+
+
