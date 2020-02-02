@@ -41,7 +41,7 @@ tracks/1/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 101.64, 70.1813 )
 
 [node name="Hallway" type="Node2D"]
@@ -253,7 +253,7 @@ texture = ExtResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Frame8"]
 visible = false
 position = Vector2( 1.27113, -22.526 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Frame" type="Sprite" parent="Background"]
 position = Vector2( 1543.36, 356.496 )

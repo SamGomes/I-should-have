@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
+[ext_resource path="res://Textures/logo-03.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Prefabs/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Textures/Backgrounds/ground-01.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/EndScene.gd" type="Script" id=5]
@@ -43,10 +43,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 4, 5, 10, 21, 23 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 6, 10, 21, 23 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.4, 0.3, 1.0, 0.0 ]
+"values": [ 0.0, 0.3, 1.0, 0.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Title/Sprite:visible")
@@ -55,7 +55,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 20 ),
+"times": PoolRealArray( 0, 24 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -105,7 +105,7 @@ script = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Title"]
 position = Vector2( 734.079, -656.128 )
-scale = Vector2( 4.00585, 2.05723 )
+scale = Vector2( 1.055, 0.542 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" parent="." instance=ExtResource( 7 )]
@@ -134,30 +134,29 @@ input_pickable = true
 position = Vector2( 0.565918, -18.4904 )
 scale = Vector2( -0.128919, 1.07136 )
 current = true
-zoom = Vector2( 0.1, 0.1 )
 limit_left = 0
 limit_right = 2800
 limit_bottom = 800
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Player/Camera2D"]
-margin_left = 481.461
-margin_top = -50.0627
-margin_right = 684.461
-margin_bottom = 54.9373
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 465.131
+margin_top = -52.519
+margin_right = 668.131
+margin_bottom = 52.481
 rect_scale = Vector2( -4.62638, 0.428212 )
-visible_characters = 7
-percent_visible = 0.395978
+visible_characters = 0
+percent_visible = 0.0
 text = "You are what you do...
 or what you think you've done...
 
-We should think positive, 
-I really should have..."
+Where there's ruin, there is hope for a treasure."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="FadeSprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0, 0, 0 )
 scale = Vector2( 1, 1 )
 z_index = -1
 texture = ExtResource( 6 )

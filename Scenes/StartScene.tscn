@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
+[ext_resource path="res://Textures/logo-03.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Prefabs/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Textures/Backgrounds/ground-01.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/StartScene.gd" type="Script" id=5]
@@ -79,6 +79,7 @@ func _ready():
 extents = Vector2( 63.8445, 210.758 )
 
 [node name="Start" type="Node2D"]
+position = Vector2( 0, -1.36038 )
 script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -105,7 +106,7 @@ script = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Title"]
 position = Vector2( 734.079, -656.128 )
-scale = Vector2( 4.00585, 2.05723 )
+scale = Vector2( 1.05521, 0.541912 )
 texture = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
