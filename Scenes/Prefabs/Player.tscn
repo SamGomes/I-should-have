@@ -1,7 +1,8 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Textures/doll/doll-front.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Prefabs/AudioStreamPlayer2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00018.png" type="Texture" id=12]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00020.png" type="Texture" id=13]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00019.png" type="Texture" id=14]
@@ -93,3 +94,6 @@ frames = SubResource( 2 )
 animation = "idle"
 playing = true
 flip_h = true
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 3 )]
+attenuation = 0.757858

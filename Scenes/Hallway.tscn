@@ -111,7 +111,7 @@ texture = ExtResource( 6 )
 position = Vector2( 3102.78, 464.324 )
 rotation = -1.57079
 scale = Vector2( 3.08, 16.88 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 2 )
 offset = Vector2( 36.0728, -8.62863 )
 
@@ -119,155 +119,156 @@ offset = Vector2( 36.0728, -8.62863 )
 position = Vector2( 571.452, 236.018 )
 rotation = 1.57079
 scale = Vector2( 3.08, 16.88 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 2 )
 offset = Vector2( 36.0728, -8.62863 )
 
 [node name="WALL2" type="Sprite" parent="Background"]
 position = Vector2( 522.018, 354.067 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL4" type="Sprite" parent="Background"]
 position = Vector2( 522.018, 354.067 )
 rotation = -0.868586
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL" type="Sprite" parent="Background"]
 position = Vector2( 522.018, 354.067 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL6" type="Sprite" parent="Background"]
 position = Vector2( 767.564, 473.157 )
 rotation = -0.785708
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL5" type="Sprite" parent="Background"]
 position = Vector2( 767.564, 473.157 )
 rotation = 0.181529
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL3" type="Sprite" parent="Background"]
 position = Vector2( 767.564, 473.157 )
 rotation = 0.029694
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL12" type="Sprite" parent="Background"]
 position = Vector2( 1111.33, 346.7 )
 rotation = -0.274472
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL11" type="Sprite" parent="Background"]
 position = Vector2( 1111.33, 346.7 )
 rotation = -1.14306
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL10" type="Sprite" parent="Background"]
 position = Vector2( 1111.33, 346.7 )
 rotation = -0.274472
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL9" type="Sprite" parent="Background"]
 position = Vector2( 1356.88, 465.79 )
 rotation = -1.06018
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL8" type="Sprite" parent="Background"]
 position = Vector2( 1356.88, 465.79 )
 rotation = -0.0929431
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL7" type="Sprite" parent="Background"]
 position = Vector2( 1356.88, 465.79 )
 rotation = -0.244778
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL18" type="Sprite" parent="Background"]
 position = Vector2( 1831.57, 389.869 )
 rotation = -0.274472
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL17" type="Sprite" parent="Background"]
 position = Vector2( 1831.57, 389.869 )
 rotation = -1.14306
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL16" type="Sprite" parent="Background"]
 position = Vector2( 1831.57, 389.869 )
 rotation = -0.274472
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL15" type="Sprite" parent="Background"]
 position = Vector2( 2077.12, 508.96 )
 rotation = -1.06018
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL14" type="Sprite" parent="Background"]
 position = Vector2( 2077.12, 508.96 )
 rotation = -0.0929431
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL13" type="Sprite" parent="Background"]
 position = Vector2( 2077.12, 508.96 )
 rotation = -0.244778
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL24" type="Sprite" parent="Background"]
 position = Vector2( 2316.06, 302.445 )
 rotation = -0.274472
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL23" type="Sprite" parent="Background"]
 position = Vector2( 2316.06, 302.445 )
 rotation = -1.14306
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL22" type="Sprite" parent="Background"]
 position = Vector2( 2316.06, 302.445 )
 rotation = -0.274472
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="WALL21" type="Sprite" parent="Background"]
 position = Vector2( 2561.6, 421.535 )
 rotation = -1.06018
-z_index = -2
+z_index = -3
 texture = ExtResource( 9 )
 
 [node name="WALL20" type="Sprite" parent="Background"]
 position = Vector2( 2561.6, 421.535 )
 rotation = -0.0929431
-z_index = -2
+z_index = -3
 texture = ExtResource( 5 )
 
 [node name="WALL19" type="Sprite" parent="Background"]
 position = Vector2( 2561.6, 421.535 )
 rotation = -0.244778
-z_index = -2
+z_index = -3
 texture = ExtResource( 4 )
 
 [node name="Frame8" type="Area2D" parent="Background"]
 position = Vector2( 2404.65, 589.881 )
 scale = Vector2( 0.8, 0.8 )
+z_index = -1
 
 [node name="Frame8" type="Sprite" parent="Background/Frame8"]
 position = Vector2( 1.55591, -21.0364 )
