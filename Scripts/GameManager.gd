@@ -26,11 +26,12 @@ func _process(delta):
 		initPieces()
 
 func _ready():
-	memories = ["res://Scenes/Hallway.tscn","res://Scenes/Level1/Level1_search_0.tscn","res://Scenes/Level1/Level1_puzzle.tscn","res://Scenes/Hallway.tscn","res://Scenes/EndScene.tscn"]
+	memories = ["res://Scenes/Hallway.tscn","res://Scenes/Level1/Level1_search_0.tscn","res://Scenes/Level1/Level1_puzzle_0.tscn","res://Scenes/Hallway.tscn","res://Scenes/EndScene.tscn"]
 	loadStartMenu()
 
 func loadStartMenu():
 #	get_tree().change_scene("res://Scenes/StartScene.tscn")
+#	return get_tree().change_scene("res://Scenes/Level1/Level1_puzzle_0.tscn")
 	return get_tree().change_scene("res://Scenes/EndScene.tscn")
 
 func changeMemory():

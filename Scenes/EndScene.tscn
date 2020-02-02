@@ -43,22 +43,22 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 10, 20 ),
+"times": PoolRealArray( 0, 13, 20 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("RichTextLabel:visible_characters")
+tracks/3/path = NodePath("RichTextLabel:percent_visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 20 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ -1, -1 ]
+"times": PoolRealArray( 0, 2, 7, 14, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.3, 0.4, 1.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -143,7 +143,7 @@ position = Vector2( 867.388, 483.19 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0, 0, 0 )
 texture = ExtResource( 6 )
 
 [node name="Background3" type="Node" parent="."]
@@ -168,6 +168,8 @@ margin_top = 360.0
 margin_right = 435.0
 margin_bottom = 459.0
 rect_scale = Vector2( 4.83303, 4.83303 )
+visible_characters = 0
+percent_visible = 0.0
 text = "[Message]
 
 I should have"

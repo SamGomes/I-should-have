@@ -5,8 +5,7 @@ var grabbed_offset = Vector2()
 var movement
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT:
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 			drag_enabled = event.pressed
 
 func _process(delta):

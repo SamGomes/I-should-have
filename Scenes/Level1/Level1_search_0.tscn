@@ -30,10 +30,11 @@
 [ext_resource path="res://Textures/assets-5-04.png" type="Texture" id=28]
 [ext_resource path="res://Textures/assets-4-04.png" type="Texture" id=29]
 [ext_resource path="res://Textures/assets-6-04.png" type="Texture" id=30]
-[ext_resource path="res://Scenes/Level1/Piece_of_Paper_3.gd" type="Script" id=31]
-[ext_resource path="res://Scenes/Level1/Piece_of_Paper_4.gd" type="Script" id=32]
-[ext_resource path="res://Scenes/Level1/Piece_of_Paper_5.gd" type="Script" id=33]
-[ext_resource path="res://Scenes/Level1/Piece_of_Paper_6.gd" type="Script" id=34]
+[ext_resource path="res://Scripts/Piece_of_Paper_3.gd" type="Script" id=31]
+[ext_resource path="res://Scripts/Piece_of_Paper_4.gd" type="Script" id=32]
+[ext_resource path="res://Scripts/Piece_of_Paper_5.gd" type="Script" id=33]
+[ext_resource path="res://Scripts/Piece_of_Paper_6.gd" type="Script" id=34]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.01672, 20.8415 )
