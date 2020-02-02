@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const MOVE_SPEED = 300
-const JUMP_FORCE = 1000
+const JUMP_FORCE = 900
 const GRAVITY = 20
 const MAX_FALL_SPEED = 400
 
@@ -67,6 +67,9 @@ func _on_passage(body):
 	if body.name == "Player":
 		GameManager.changeMemory()
 
+func _on_stay(body):
+	if body.name == "Player":
+		GameManager.stayOnMemory()
 
 # for hallway scene
 func _on_painting_mouse_enter():
