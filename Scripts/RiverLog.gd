@@ -6,7 +6,7 @@ const MOVE_SPEED = 500
 
 var initPosition
 var mover
-var life=0
+var life = 0
 var lim
 
 
@@ -27,7 +27,7 @@ func _process(delta):
 	life +=delta
 	if life > mover: 
 		position += Vector2(0, 1)
-	if 	life > lim: 
+	if life > lim: 
 		position = initPosition
 		life=0	
 		mover = rng.randf_range(1.0, 5.0)
