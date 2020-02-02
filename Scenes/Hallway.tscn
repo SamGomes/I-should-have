@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/Backgrounds/ground-01.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/AnimationSelfStart.gd" type="Script" id=7]
 [ext_resource path="res://Textures/Corridor/Frame.png" type="Texture" id=8]
 [ext_resource path="res://Textures/Corridor/WALL2.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Hallway.gd" type="Script" id=10]
 
 [sub_resource type="Animation" id=3]
 resource_name = "Animation"
@@ -70,6 +71,7 @@ tracks/1/keys = {
 extents = Vector2( 101.64, 70.1813 )
 
 [node name="Hallway" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="TileMap" type="TileMap" parent="."]
 modulate = Color( 0.117647, 0, 0, 1 )
@@ -85,22 +87,21 @@ input_pickable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
-zoom = Vector2( 0.1, 0.1 )
+zoom = Vector2( 0.928, 0.928 )
 limit_left = 0
 limit_right = 2800
 limit_bottom = 800
 
-[node name="FadeOut" type="AnimationPlayer" parent="."]
+[node name="FadeIn" type="AnimationPlayer" parent="."]
 anims/Animation = SubResource( 3 )
 script = ExtResource( 7 )
 
-[node name="FadeIn" type="AnimationPlayer" parent="."]
-method_call_mode = 1
+[node name="FadeOut" type="AnimationPlayer" parent="."]
 anims/Animation = SubResource( 1 )
 script = ExtResource( 7 )
 
 [node name="FadeSprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0, 0, 0.0721649 )
 position = Vector2( 1237.87, 391.563 )
 texture = ExtResource( 6 )
 
@@ -264,48 +265,6 @@ rotation = -0.244778
 z_index = -2
 texture = ExtResource( 4 )
 
-[node name="Frame" type="Sprite" parent="Background"]
-position = Vector2( 1543.36, 356.496 )
-scale = Vector2( 0.7, 0.7 )
-z_index = -2
-texture = ExtResource( 8 )
-
-[node name="Frame2" type="Sprite" parent="Background"]
-position = Vector2( 1666.99, 566.674 )
-scale = Vector2( 0.7, 0.7 )
-z_index = -2
-texture = ExtResource( 8 )
-
-[node name="Frame3" type="Sprite" parent="Background"]
-position = Vector2( 1800.95, 340.013 )
-scale = Vector2( 0.8, 0.8 )
-z_index = -2
-texture = ExtResource( 8 )
-
-[node name="Frame4" type="Sprite" parent="Background"]
-position = Vector2( 1893.68, 578.009 )
-scale = Vector2( 0.8, 0.8 )
-z_index = -2
-texture = ExtResource( 8 )
-
-[node name="Frame5" type="Sprite" parent="Background"]
-position = Vector2( 2070.44, 301.768 )
-scale = Vector2( 0.8, 0.8 )
-z_index = -2
-texture = ExtResource( 8 )
-
-[node name="Frame6" type="Sprite" parent="Background"]
-position = Vector2( 2153.33, 514.65 )
-scale = Vector2( 0.8, 0.8 )
-z_index = -2
-texture = ExtResource( 8 )
-
-[node name="Frame7" type="Sprite" parent="Background"]
-position = Vector2( 2378.19, 322.834 )
-scale = Vector2( 0.8, 0.8 )
-z_index = -2
-texture = ExtResource( 8 )
-
 [node name="Frame8" type="Area2D" parent="Background"]
 position = Vector2( 2404.65, 589.881 )
 scale = Vector2( 0.8, 0.8 )
@@ -324,6 +283,48 @@ texture = ExtResource( 6 )
 visible = false
 position = Vector2( 1.27113, -22.526 )
 shape = SubResource( 2 )
+
+[node name="Frame" type="Sprite" parent="Background"]
+position = Vector2( 1543.36, 356.496 )
+scale = Vector2( 0.7, 0.7 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[node name="Frame6" type="Sprite" parent="Background"]
+position = Vector2( 2153.33, 514.65 )
+scale = Vector2( 0.8, 0.8 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[node name="Frame2" type="Sprite" parent="Background"]
+position = Vector2( 1666.99, 566.674 )
+scale = Vector2( 0.7, 0.7 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[node name="Frame4" type="Sprite" parent="Background"]
+position = Vector2( 1893.68, 578.009 )
+scale = Vector2( 0.8, 0.8 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[node name="Frame3" type="Sprite" parent="Background"]
+position = Vector2( 1800.95, 340.013 )
+scale = Vector2( 0.8, 0.8 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[node name="Frame5" type="Sprite" parent="Background"]
+position = Vector2( 2070.44, 301.768 )
+scale = Vector2( 0.8, 0.8 )
+z_index = -2
+texture = ExtResource( 8 )
+
+[node name="Frame7" type="Sprite" parent="Background"]
+position = Vector2( 2378.19, 322.834 )
+scale = Vector2( 0.8, 0.8 )
+z_index = -2
+texture = ExtResource( 8 )
 [connection signal="input_event" from="Background/Frame8" to="Player" method="_on_painting_mouse_click"]
 [connection signal="mouse_entered" from="Background/Frame8" to="Player" method="_on_painting_mouse_enter"]
 [connection signal="mouse_exited" from="Background/Frame8" to="Player" method="_on_painting_mouse_leave"]

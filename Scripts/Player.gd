@@ -63,23 +63,12 @@ func play_anim(anim_name):
 	sprite.play(anim_name)
 	
 
-func _on_passage_to_1_0_0(body):
+func _on_passage(body):
 	if body.name == "Player":
-		GameManager.changeMemory(1,0,0)
-		
-func _on_passage_to_1_1_0(body):
-	if body.name == "Player":
-		GameManager.changeMemory(1,1,0)
-	
-func _on_passage_1_2_0(body):
-	if body.name == "Player":
-		GameManager.changeMemory(1,2,0)
+		GameManager.changeMemory()
 
-func _on_passage_to_0_0_0(body):
-	if body.name == "Player":
-		GameManager.changeMemory(0,0,0)
-		
 
+# for hallway scene
 func _on_painting_mouse_enter():
 	print(get_path())
 	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(0.0,0.0,0.0)
@@ -87,17 +76,17 @@ func _on_painting_mouse_enter():
 func _on_painting_mouse_leave():
 	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(1.0,1.0,1.0)
 		
-func _on_painting_mouse_click(viewport, event, idx):
+func _on_painting_mouse_click(viewport, event, idx): 
 	if (inputEnabled && event.is_pressed() and event.button_index == BUTTON_LEFT):
-		var camera = get_node(NodePath("/root/Hallway/Player/Camera2D"))
-		camera.get_parent().remove_child(camera) # error here  
-		get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).add_child(camera) 
-		var fadeOut = get_node(NodePath("/root/Hallway/FadeOut"))
-		fadeOut.play("Animation")
+#		var camera = get_node(NodePath("/root/Hallway/Player/Camera2D"))
+#		camera.get_parent().remove_child(camera) # error here  
+#		get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).add_child(camera) 
+		var fadeIn = get_node(NodePath("/root/Hallway/FadeIn"))
+		fadeIn.play("Animation")
 		disable_input()
-		yield(get_tree().create_timer(fadeOut.get_current_animation_length()), "timeout") #wait() in GDscript
+		yield(get_tree().create_timer(fadeIn.get_current_animation_length()), "timeout") #wait() in GDscript
 		enable_input()
-		GameManager.changeMemory(1,0,0)
+		GameManager.changeMemory()
 
 
 

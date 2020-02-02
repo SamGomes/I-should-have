@@ -1,7 +1,7 @@
 extends Node2D
 
 var memories = [] #List<List<ScenePath>>
-var currMemory
+var currLevelNum = 0
 
 export var piece1_collected = false
 export var piece2_collected = false
@@ -10,35 +10,35 @@ export var piece4_collected = false
 export var piece5_collected = false
 export var piece6_collected = false
 
-var bolota = false 
-var perola = false 
-
+func initPieces():
+	piece1_collected = false
+	piece2_collected = false
+	piece3_collected = false
+	piece4_collected = false
+	piece5_collected = false
+	piece6_collected = false
 
 func _process(delta):
 	#Function to load puzzle scene
 	if all_pieces_collected():
-		pass
+		changeMemory()
+		initPieces()
 
 func _ready():
-	var submemories_l1_search = []
-	submemories_l1_search.append("res://Scenes/Level1/Level1_search_0.tscn")
-	submemories_l1_search.append("res://Scenes/Level1/Level1_search_1.tscn")
-	submemories_l1_search.append("res://Scenes/Level1/Level1_search_2.tscn")	
-	memories.append([["res://Scenes/Hallway.tscn"],[]])
-	memories.append([submemories_l1_search,["res://Scenes/Level1/Level1_puzzle.tscn"]])
-	
+	memories = ["res://Scenes/Hallway.tscn","res://Scenes/Level1/Level1_search_0.tscn","res://Scenes/Level1/Level1_puzzle.tscn","res://Scenes/Hallway.tscn","res://Scenes/FinalScene.tscn"]
 	loadStartMenu()
 
 func loadStartMenu():
-	return get_tree().change_scene("res://Scenes/StartScene.tscn")
+	get_tree().change_scene("res://Scenes/StartScene.tscn")
 #	return get_tree().change_scene("res://Scenes/Hallway.tscn")
 
-func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
-	currMemory = memories[levelNum][type][levelPart]
-	return get_tree().change_scene(currMemory)
+func changeMemory():
+	get_tree().change_scene(memories[currLevelNum])
+	currLevelNum+=1
 
 func changeTeste():
-	return get_tree().change_scene("res://Scenes/Level1/Minigame1.tscn")
+	get_tree().change_scene("res://Scenes/Level1/Minigame1.tscn")
+
 
 	
 func all_pieces_collected():
