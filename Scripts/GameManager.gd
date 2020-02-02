@@ -21,6 +21,7 @@ func initPieces():
 func _process(delta):
 	#Function to load puzzle scene
 	if all_pieces_collected():
+		print("Colected ALL pieces!")
 		changeMemory()
 		initPieces()
 

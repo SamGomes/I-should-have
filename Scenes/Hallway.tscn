@@ -11,7 +11,7 @@
 [ext_resource path="res://Textures/Corridor/WALL2.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/Hallway.gd" type="Script" id=10]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "Animation"
 length = 12.0
 tracks/0/type = "value"
@@ -39,8 +39,7 @@ tracks/1/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Animation"
+[sub_resource type="Animation" id=2]
 length = 12.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Player/Camera2D:zoom")
@@ -67,7 +66,7 @@ tracks/1/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 101.64, 70.1813 )
 
 [node name="Hallway" type="Node2D"]
@@ -93,11 +92,11 @@ limit_right = 2800
 limit_bottom = 800
 
 [node name="FadeIn" type="AnimationPlayer" parent="."]
-anims/Animation = SubResource( 3 )
+anims/Animation = SubResource( 1 )
 script = ExtResource( 7 )
 
 [node name="FadeOut" type="AnimationPlayer" parent="."]
-anims/Animation = SubResource( 1 )
+anims/Animation = SubResource( 2 )
 script = ExtResource( 7 )
 
 [node name="FadeSprite" type="Sprite" parent="."]
@@ -278,12 +277,13 @@ texture = ExtResource( 8 )
 [node name="Sprite" type="Sprite" parent="Background/Frame8"]
 position = Vector2( 2.05004, -19.8722 )
 scale = Vector2( 0.0397765, 0.0400721 )
+z_index = -1
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Frame8"]
 visible = false
 position = Vector2( 1.27113, -22.526 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Frame" type="Sprite" parent="Background"]
 position = Vector2( 1543.36, 356.496 )
