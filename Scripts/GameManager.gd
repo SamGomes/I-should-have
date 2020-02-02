@@ -35,9 +35,6 @@ func loadStartMenu():
 
 func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
 	currMemory = memories[levelNum][type][levelPart]
-#	queue_free()
-#	var scene = load(currMemory).instance()
-#	add_child(scene)
 	return get_tree().change_scene(currMemory)
 
 func changeTeste():

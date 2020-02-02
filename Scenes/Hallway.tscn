@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/Backgrounds/ground-01.png" type="Texture" id=2]
@@ -9,6 +9,34 @@
 [ext_resource path="res://Scripts/AnimationSelfStart.gd" type="Script" id=7]
 [ext_resource path="res://Textures/Corridor/Frame.png" type="Texture" id=8]
 [ext_resource path="res://Textures/Corridor/WALL2.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Animation"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FadeSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 9.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "Animation"
@@ -48,7 +76,7 @@ modulate = Color( 0.117647, 0, 0, 1 )
 tile_set = ExtResource( 1 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
-tile_data = PoolIntArray( -65537, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -131067, 1, 0, -131066, 1, 0, -131065, 1, 0, -131064, 1, 0, -131063, 1, 0, -131062, 1, 0, -131061, 1, 0, -131060, 1, 0, -131059, 1, 0, -131058, 1, 0, -131057, 1, 0, -131056, 1, 0, -131055, 1, 0, -131054, 1, 0, -131053, 1, 0, -131052, 1, 0, -131051, 1, 0, -131050, 1, 0, -131049, 1, 0, -131048, 1, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131044, 1, 0, -131043, 1, 0, -131042, 1, 0, -131041, 1, 0, -131040, 1, 0, -131039, 1, 0, -131038, -1073741823, 0, -131037, -1073741823, 0, -131036, -1073741823, 0, -131035, -1073741823, 0, -131034, -1073741823, 0, -131033, -1073741823, 0, -131032, -1073741823, 0, -131031, -1073741823, 0, -131030, -1073741823, 0, -131029, -1073741823, 0, -131028, -1073741823, 0, -131027, -1073741823, 0, -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -65524, 1, 0, -65523, 1, 0, -65522, 1, 0, -65521, 1, 0, -65520, 1, 0, -65519, 1, 0, -65518, 1, 0, -65517, 1, 0, -65516, 1, 0, -65515, 1, 0, -65514, 1, 0, -65513, 1, 0, -65512, 1, 0, -65511, 1, 0, -65510, 1, 0, -65509, 1, 0, -65508, 1, 0, -65507, 1, 0, -65506, 1, 0, -65505, 1, 0, -65504, 1, 0, -65503, 1, 0, -65502, -1073741823, 0, -65501, -1073741823, 0, -65500, -1073741823, 0, -65499, -1073741823, 0, -65498, -1073741823, 0, -65497, -1073741823, 0, -65496, -1073741823, 0, -65495, -1073741823, 0, -65494, -1073741823, 0, -65493, -1073741823, 0, -65492, -1073741823, 0, -65491, -1073741823, 0, 65535, 1, 0, 0, 1, 0, 43, 1, 0, 44, -1073741823, 0, 45, -1073741823, 0, 131071, 1, 0, 65536, 1, 0, 65579, 1, 0, 65580, 1, 0, 65581, -1073741823, 0, 196607, 1, 0, 131072, 1, 0, 131115, 1, 0, 131116, 1, 0, 131117, -1073741823, 0, 262143, 1, 0, 196608, 1, 0, 196651, 1, 0, 196652, 1, 0, 196653, 1, 0, 327679, 1, 0, 262144, 1, 0, 262187, 1, 0, 262188, 1, 0, 262189, 1, 0, 393215, 1, 0, 327680, 1, 0, 327723, 1, 0, 327724, 1, 0, 327725, 1, 0, 458751, 1, 0, 393216, 1, 0, 393259, 1, 0, 393260, 1, 0, 393261, -1073741823, 0, 524287, 1, 0, 458752, 1, 0, 458795, 1, 0, 458796, 1, 0, 458797, -1073741823, 0, 589823, 1, 0, 524288, 1, 0, 524331, 1, 0, 524332, 1, 0, 524333, -1073741823, 0, 655359, 1, 0, 589824, 1, 0, 589867, 1, 0, 589868, 1, 0, 589869, -1073741823, 0, 720895, 1, 0, 655360, 1, 0, 655403, 1, 0, 655404, -1073741823, 0, 655405, -1073741823, 0, 786431, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 1, 0, 720927, 1, 0, 720928, 1, 0, 720929, 1, 0, 720930, 1, 0, 720931, 1, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 1, 0, 720936, 1, 0, 720937, 1, 0, 720938, 1, 0, 720939, 1, 0, 720940, 1, 0, 720941, 1, 0, 851967, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 1, 0, 786465, 1, 0, 786466, 1, 0, 786467, 1, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786477, -1073741823, 0 )
+tile_data = PoolIntArray( -65537, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -131067, 1, 0, -131066, 1, 0, -131065, 1, 0, -131064, 1, 0, -131063, 1, 0, -131062, 1, 0, -131061, 1, 0, -131060, 1, 0, -131059, 1, 0, -131058, 1, 0, -131057, 1, 0, -131056, 1, 0, -131055, 1, 0, -131054, 1, 0, -131053, 1, 0, -131052, 1, 0, -131051, 1, 0, -131050, 1, 0, -131049, 1, 0, -131048, 1, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131044, 1, 0, -131043, 1, 0, -131042, 1, 0, -131041, 1, 0, -131040, 1, 0, -131039, 1, 0, -131038, -1073741823, 0, -131037, -1073741823, 0, -131036, -1073741823, 0, -131035, -1073741823, 0, -131034, -1073741823, 0, -131033, -1073741823, 0, -131032, -1073741823, 0, -131031, -1073741823, 0, -131030, -1073741823, 0, -131029, -1073741823, 0, -131028, -1073741823, 0, -131027, -1073741823, 0, -131026, -1073741823, 0, -131025, -1073741823, 0, -131024, -1073741823, 0, -131023, -1073741823, 0, -131022, -1073741823, 0, -131021, -1073741823, 0, -131020, -1073741823, 0, -131019, -1073741823, 0, -131018, -1073741823, 0, -131017, -1073741823, 0, -131016, -1073741823, 0, -131015, -1073741823, 0, -1, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -65524, 1, 0, -65523, 1, 0, -65522, 1, 0, -65521, 1, 0, -65520, 1, 0, -65519, 1, 0, -65518, 1, 0, -65517, 1, 0, -65516, 1, 0, -65515, 1, 0, -65514, 1, 0, -65513, 1, 0, -65512, 1, 0, -65511, 1, 0, -65510, 1, 0, -65509, 1, 0, -65508, 1, 0, -65507, 1, 0, -65506, 1, 0, -65505, 1, 0, -65504, 1, 0, -65503, 1, 0, -65502, -1073741823, 0, -65501, -1073741823, 0, -65500, -1073741823, 0, -65499, -1073741823, 0, -65498, -1073741823, 0, -65497, -1073741823, 0, -65496, -1073741823, 0, -65495, -1073741823, 0, -65494, -1073741823, 0, -65493, -1073741823, 0, -65492, -1073741823, 0, -65491, -1073741823, 0, -65490, -1073741823, 0, -65489, -1073741823, 0, -65488, -1073741823, 0, -65487, -1073741823, 0, -65486, -1073741823, 0, -65485, -1073741823, 0, -65484, -1073741823, 0, -65483, -1073741823, 0, -65482, -1073741823, 0, -65481, -1073741823, 0, -65480, -1073741823, 0, -65479, -1073741823, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 1, 0, 31, 1, 0, 32, 1, 0, 33, 1, 0, 34, 1, 0, 35, 1, 0, 36, 1, 0, 37, 1, 0, 38, 1, 0, 39, 1, 0, 40, 1, 0, 41, 1, 0, 42, 1, 0, 43, 1, 0, 44, -1073741823, 0, 45, -1073741823, 0, 46, -1073741823, 0, 47, -1073741823, 0, 48, -1073741823, 0, 49, -1073741823, 0, 50, -1073741823, 0, 51, -1073741823, 0, 52, -1073741823, 0, 53, -1073741823, 0, 54, -1073741823, 0, 55, -1073741823, 0, 56, -1073741823, 0, 57, -1073741823, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, -1073741823, 0, 65545, -1073741823, 0, 65546, -1073741823, 0, 65547, -1073741823, 0, 65548, -1073741823, 0, 65549, -1073741823, 0, 65550, -1073741823, 0, 65551, -1073741823, 0, 65552, -1073741823, 0, 65553, -1073741823, 0, 65554, -1073741823, 0, 65555, -1073741823, 0, 65556, -1073741823, 0, 65557, -1073741823, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 65566, 1, 0, 65567, 1, 0, 65568, 1, 0, 65569, 1, 0, 65570, 1, 0, 65571, 1, 0, 65572, 1, 0, 65573, 1, 0, 65574, 1, 0, 65575, 1, 0, 65576, 1, 0, 65577, 1, 0, 65578, 1, 0, 65579, 1, 0, 65580, 1, 0, 65581, -1073741823, 0, 65582, -1073741823, 0, 65583, -1073741823, 0, 65584, -1073741823, 0, 65585, -1073741823, 0, 65586, -1073741823, 0, 65587, -1073741823, 0, 65588, -1073741823, 0, 65589, -1073741823, 0, 65590, -1073741823, 0, 65591, -1073741823, 0, 65592, -1073741823, 0, 65593, 1, 0, 196607, 1, 0, 131072, -1073741823, 0, 131128, 1, 0, 131129, 1, 0, 262143, 1, 0, 196608, 1, 0, 196664, 1, 0, 196665, 1, 0, 327679, 1, 0, 262144, 1, 0, 262200, 1, 0, 262201, 1, 0, 393215, 1, 0, 327680, 1, 0, 327736, 1, 0, 327737, 1, 0, 458751, 1, 0, 393216, 1, 0, 393272, 1, 0, 393273, 1, 0, 524287, 1, 0, 458752, 1, 0, 458808, 1, 0, 458809, 1, 0, 589823, 1, 0, 524288, 1, 0, 524344, 1, 0, 524345, 1, 0, 655359, 1, 0, 589824, 1, 0, 589880, 1, 0, 589881, 1, 0, 720895, 1, 0, 655360, 1, 0, 655416, 1, 0, 655417, 1, 0, 786431, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 720914, 1, 0, 720915, 1, 0, 720916, 1, 0, 720917, 1, 0, 720918, 1, 0, 720919, 1, 0, 720920, 1, 0, 720921, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 1, 0, 720927, 1, 0, 720928, 1, 0, 720929, 1, 0, 720930, 1, 0, 720931, 1, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 1, 0, 720936, 1, 0, 720937, 1, 0, 720938, 1, 0, 720939, 1, 0, 720940, 1, 0, 720941, 1, 0, 720942, 1, 0, 720943, 1, 0, 720944, 1, 0, 720945, 1, 0, 720946, 1, 0, 720947, 1, 0, 720948, 1, 0, 720949, 1, 0, 720950, 1, 0, 720951, 1, 0, 720952, 1, 0, 720953, 1, 0, 851967, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 1, 0, 786465, 1, 0, 786466, 1, 0, 786467, 1, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786477, 1, 0, 786478, 1, 0, 786479, 1, 0, 786480, 1, 0, 786481, 1, 0, 786482, 1, 0, 786483, 1, 0, 786484, 1, 0, 786485, 1, 0, 786486, 1, 0, 786487, 1, 0, 786488, 1, 0, 786489, 1, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 476.311, 595.452 )
@@ -57,25 +85,29 @@ input_pickable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
-zoom = Vector2( 0.322658, 0.322658 )
+zoom = Vector2( 0.1, 0.1 )
 limit_left = 0
 limit_right = 2800
 limit_bottom = 800
 
-[node name="Fade" type="AnimationPlayer" parent="."]
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+anims/Animation = SubResource( 3 )
+script = ExtResource( 7 )
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
 method_call_mode = 1
 anims/Animation = SubResource( 1 )
 script = ExtResource( 7 )
 
 [node name="FadeSprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 0.709576 )
+modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 1237.87, 391.563 )
 texture = ExtResource( 6 )
 
 [node name="Background" type="Node" parent="."]
 
 [node name="Background" type="Sprite" parent="Background"]
-position = Vector2( 2247.79, 470.345 )
+position = Vector2( 3102.78, 464.324 )
 rotation = -1.57079
 scale = Vector2( 3.08, 16.88 )
 z_index = -2
@@ -91,184 +123,192 @@ texture = ExtResource( 2 )
 offset = Vector2( 36.0728, -8.62863 )
 
 [node name="WALL2" type="Sprite" parent="Background"]
-position = Vector2( 522.018, 281.966 )
+position = Vector2( 522.018, 354.067 )
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL4" type="Sprite" parent="Background"]
-position = Vector2( 522.018, 281.966 )
+position = Vector2( 522.018, 354.067 )
 rotation = -0.868586
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL" type="Sprite" parent="Background"]
-position = Vector2( 522.018, 281.966 )
+position = Vector2( 522.018, 354.067 )
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL6" type="Sprite" parent="Background"]
-position = Vector2( 767.564, 401.056 )
+position = Vector2( 767.564, 473.157 )
 rotation = -0.785708
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL5" type="Sprite" parent="Background"]
-position = Vector2( 767.564, 401.056 )
+position = Vector2( 767.564, 473.157 )
 rotation = 0.181529
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL3" type="Sprite" parent="Background"]
-position = Vector2( 767.564, 401.056 )
+position = Vector2( 767.564, 473.157 )
 rotation = 0.029694
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL12" type="Sprite" parent="Background"]
-position = Vector2( 1111.33, 274.599 )
+position = Vector2( 1111.33, 346.7 )
 rotation = -0.274472
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL11" type="Sprite" parent="Background"]
-position = Vector2( 1111.33, 274.599 )
+position = Vector2( 1111.33, 346.7 )
 rotation = -1.14306
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL10" type="Sprite" parent="Background"]
-position = Vector2( 1111.33, 274.599 )
+position = Vector2( 1111.33, 346.7 )
 rotation = -0.274472
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL9" type="Sprite" parent="Background"]
-position = Vector2( 1356.88, 393.689 )
+position = Vector2( 1356.88, 465.79 )
 rotation = -1.06018
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL8" type="Sprite" parent="Background"]
-position = Vector2( 1356.88, 393.689 )
+position = Vector2( 1356.88, 465.79 )
 rotation = -0.0929431
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL7" type="Sprite" parent="Background"]
-position = Vector2( 1356.88, 393.689 )
+position = Vector2( 1356.88, 465.79 )
 rotation = -0.244778
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL18" type="Sprite" parent="Background"]
-position = Vector2( 1831.57, 317.768 )
+position = Vector2( 1831.57, 389.869 )
 rotation = -0.274472
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL17" type="Sprite" parent="Background"]
-position = Vector2( 1831.57, 317.768 )
+position = Vector2( 1831.57, 389.869 )
 rotation = -1.14306
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL16" type="Sprite" parent="Background"]
-position = Vector2( 1831.57, 317.768 )
+position = Vector2( 1831.57, 389.869 )
 rotation = -0.274472
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL15" type="Sprite" parent="Background"]
-position = Vector2( 2077.12, 436.859 )
+position = Vector2( 2077.12, 508.96 )
 rotation = -1.06018
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL14" type="Sprite" parent="Background"]
-position = Vector2( 2077.12, 436.859 )
+position = Vector2( 2077.12, 508.96 )
 rotation = -0.0929431
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL13" type="Sprite" parent="Background"]
-position = Vector2( 2077.12, 436.859 )
+position = Vector2( 2077.12, 508.96 )
 rotation = -0.244778
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL24" type="Sprite" parent="Background"]
-position = Vector2( 2316.06, 230.344 )
+position = Vector2( 2316.06, 302.445 )
 rotation = -0.274472
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL23" type="Sprite" parent="Background"]
-position = Vector2( 2316.06, 230.344 )
+position = Vector2( 2316.06, 302.445 )
 rotation = -1.14306
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL22" type="Sprite" parent="Background"]
-position = Vector2( 2316.06, 230.344 )
+position = Vector2( 2316.06, 302.445 )
 rotation = -0.274472
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="WALL21" type="Sprite" parent="Background"]
-position = Vector2( 2561.6, 349.434 )
+position = Vector2( 2561.6, 421.535 )
 rotation = -1.06018
 z_index = -2
 texture = ExtResource( 9 )
 
 [node name="WALL20" type="Sprite" parent="Background"]
-position = Vector2( 2561.6, 349.434 )
+position = Vector2( 2561.6, 421.535 )
 rotation = -0.0929431
 z_index = -2
 texture = ExtResource( 5 )
 
 [node name="WALL19" type="Sprite" parent="Background"]
-position = Vector2( 2561.6, 349.434 )
+position = Vector2( 2561.6, 421.535 )
 rotation = -0.244778
 z_index = -2
 texture = ExtResource( 4 )
 
 [node name="Frame" type="Sprite" parent="Background"]
-position = Vector2( 1321.42, 271.164 )
+position = Vector2( 1543.36, 356.496 )
+scale = Vector2( 0.7, 0.7 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame2" type="Sprite" parent="Background"]
-position = Vector2( 1445.05, 481.342 )
+position = Vector2( 1666.99, 566.674 )
+scale = Vector2( 0.7, 0.7 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame3" type="Sprite" parent="Background"]
-position = Vector2( 1658.32, 261.891 )
+position = Vector2( 1800.95, 340.013 )
+scale = Vector2( 0.8, 0.8 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame4" type="Sprite" parent="Background"]
-position = Vector2( 1751.05, 499.887 )
+position = Vector2( 1893.68, 578.009 )
+scale = Vector2( 0.8, 0.8 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame5" type="Sprite" parent="Background"]
-position = Vector2( 1979.77, 196.983 )
+position = Vector2( 2070.44, 301.768 )
+scale = Vector2( 0.8, 0.8 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame6" type="Sprite" parent="Background"]
-position = Vector2( 2075.59, 447.343 )
+position = Vector2( 2153.33, 514.65 )
+scale = Vector2( 0.8, 0.8 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame7" type="Sprite" parent="Background"]
-position = Vector2( 2363.04, 456.615 )
+position = Vector2( 2408.34, 567.182 )
+scale = Vector2( 0.8, 0.8 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame8" type="Area2D" parent="Background"]
-position = Vector2( 2376.36, 226.893 )
+position = Vector2( 2385.6, 351.88 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Frame8" type="Sprite" parent="Background/Frame8"]
 position = Vector2( 1.55591, -21.0364 )
@@ -281,6 +321,7 @@ scale = Vector2( 0.0397765, 0.0400721 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Frame8"]
+visible = false
 position = Vector2( 1.27113, -22.526 )
 shape = SubResource( 2 )
 [connection signal="input_event" from="Background/Frame8" to="Player" method="_on_painting_mouse_click"]

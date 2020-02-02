@@ -89,7 +89,12 @@ func _on_painting_mouse_leave():
 		
 func _on_painting_mouse_click(viewport, event, idx):
 	if (event.is_pressed() and event.button_index == BUTTON_LEFT):
-		GameManager.changeTeste()
+		var fadeOut = get_node(NodePath("/root/Hallway/FadeOut"))
+		fadeOut.play("Animation")
+		disable_input()
+		yield(get_tree().create_timer(fadeOut.get_current_animation_length()), "timeout") #wait() in GDscript
+		enable_input()
+		GameManager.changeMemory(0,0,0)
 
 
 
