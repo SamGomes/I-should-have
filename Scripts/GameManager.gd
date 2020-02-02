@@ -30,7 +30,7 @@ func _ready():
 	loadStartMenu()
 
 func loadStartMenu():
-	return get_tree().change_scene("res://Scenes/Level1/Level1_search_0")
+	return get_tree().change_scene("res://Scenes/StartScene.tscn")
 
 func changeMemory(levelNum, levelPart, type): #type=> 0:search, 1:puzzle
 	currMemory = memories[levelNum][type][levelPart]

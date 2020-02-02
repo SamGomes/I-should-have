@@ -1,11 +1,12 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Prefabs/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Textures/assets-04.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Level1/Piece_of_Paper_1.gd" type="Script" id=4]
 [ext_resource path="res://Textures/assets-3-04.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Level1/Piece_of_Paper_2.gd" type="Script" id=6]
+
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.01672, 20.8415 )
