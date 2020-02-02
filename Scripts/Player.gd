@@ -81,10 +81,11 @@ func _on_passage_to_0_0_0(body):
 		
 
 func _on_painting_mouse_enter():
-	get_node(NodePath("/root/Background/Frame8/Sprite")).modulate = Color(1.0,1.0,1.0)
+	print(get_path())
+	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(0.0,0.0,0.0)
 		
 func _on_painting_mouse_leave():
-	get_node(NodePath("/root/Background/Frame8/Sprite")).modulate = Color(0.0,0.0,0.0)
+	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(1.0,1.0,1.0)
 		
 func _on_painting_mouse_click(viewport, event, idx):
 	if (event.is_pressed() and event.button_index == BUTTON_LEFT):
