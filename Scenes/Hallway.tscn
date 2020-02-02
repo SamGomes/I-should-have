@@ -12,7 +12,7 @@
 
 [sub_resource type="Animation" id=3]
 resource_name = "Animation"
-length = 20.0
+length = 12.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Player/Camera2D:zoom")
 tracks/0/interp = 1
@@ -20,10 +20,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 10.8 ),
+"times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("FadeSprite:modulate")
@@ -40,7 +40,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=1]
 resource_name = "Animation"
-length = 20.0
+length = 12.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Player/Camera2D:zoom")
 tracks/0/interp = 1
@@ -100,7 +100,7 @@ anims/Animation = SubResource( 1 )
 script = ExtResource( 7 )
 
 [node name="FadeSprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 0 )
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1237.87, 391.563 )
 texture = ExtResource( 6 )
 
@@ -301,13 +301,13 @@ z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame7" type="Sprite" parent="Background"]
-position = Vector2( 2408.34, 567.182 )
+position = Vector2( 2378.19, 322.834 )
 scale = Vector2( 0.8, 0.8 )
 z_index = -2
 texture = ExtResource( 8 )
 
 [node name="Frame8" type="Area2D" parent="Background"]
-position = Vector2( 2385.6, 351.88 )
+position = Vector2( 2404.65, 589.881 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Frame8" type="Sprite" parent="Background/Frame8"]
