@@ -95,7 +95,7 @@ anims/FadeIn = SubResource( 2 )
 anims/FadeOut = SubResource( 3 )
 
 [node name="FadeSprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0, 0, 0.222485 )
 z_index = 5
 texture = ExtResource( 6 )
 
@@ -115,10 +115,10 @@ scale = Vector2( 4, 4 )
 input_pickable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 0, -10 )
+position = Vector2( 0.440054, -16.6021 )
 scale = Vector2( -0.128919, 1.07136 )
 current = true
-zoom = Vector2( 0.1, 0.1 )
+zoom = Vector2( 0.799763, 0.799763 )
 limit_left = 0
 limit_right = 2800
 limit_bottom = 800
