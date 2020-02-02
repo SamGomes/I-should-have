@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Textures/blank.png" type="Texture" id=1]
+
+[node name="FadeSprite" type="Sprite"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 1237.87, 391.563 )
+texture = ExtResource( 1 )

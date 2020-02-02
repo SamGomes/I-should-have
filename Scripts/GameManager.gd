@@ -31,8 +31,9 @@ func _ready():
 
 func loadStartMenu():
 #	get_tree().change_scene("res://Scenes/StartScene.tscn")
-#	return get_tree().change_scene("res://Scenes/Level1/Level1_puzzle_0.tscn")
-	return get_tree().change_scene("res://Scenes/EndScene.tscn")
+	currLevelNum = 1
+	get_tree().change_scene("res://Scenes/Level1/Level1_search_0.tscn")
+#	return get_tree().change_scene("res://Scenes/EndScene.tscn")
 
 func changeMemory():
 	get_tree().change_scene(memories[currLevelNum])
