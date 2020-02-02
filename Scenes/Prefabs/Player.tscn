@@ -1,8 +1,16 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Textures/doll/doll-front.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Prefabs/AudioStreamPlayer2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 4.png" type="Texture" id=4]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 6.png" type="Texture" id=5]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 8.png" type="Texture" id=6]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 9.png" type="Texture" id=7]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 10.png" type="Texture" id=8]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 7.png" type="Texture" id=9]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 11.png" type="Texture" id=10]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 3.png" type="Texture" id=11]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00018.png" type="Texture" id=12]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00020.png" type="Texture" id=13]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00019.png" type="Texture" id=14]
@@ -56,6 +64,9 @@
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00032.png" type="Texture" id=62]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00022.png" type="Texture" id=63]
 [ext_resource path="res://Textures/doll/WALKYCYCLE 4/doll [Recovered]_00034.png" type="Texture" id=64]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 2.png" type="Texture" id=65]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 5.png" type="Texture" id=66]
+[ext_resource path="res://Textures/doll/SPRITE JUMP/Asset 12.png" type="Texture" id=67]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.83613, 21.0654 )
@@ -72,9 +83,14 @@ animations = [ {
 "name": "walk",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 65 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 66 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 67 ) ],
 "loop": true,
 "name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "jump_old",
 "speed": 5.0
 } ]
 
@@ -91,7 +107,8 @@ position = Vector2( 2.72626, 0.411642 )
 rotation = 0.00643497
 scale = Vector2( 0.0341055, 0.0341055 )
 frames = SubResource( 2 )
-animation = "idle"
+animation = "jump"
+frame = 7
 playing = true
 flip_h = true
 

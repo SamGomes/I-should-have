@@ -608,7 +608,7 @@ position = Vector2( 276.008, 625.814 )
 scale = Vector2( 0.163459, 0.163459 )
 frames = SubResource( 1 )
 animation = "crie"
-frame = 396
+frame = 130
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
