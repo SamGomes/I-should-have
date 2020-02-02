@@ -78,7 +78,18 @@ func _on_passage_1_2_0(body):
 func _on_passage_to_0_0_0(body):
 	if body.name == "Player":
 		GameManager.changeMemory(0,0,0)
-	
+		
+
+func _on_painting_mouse_enter(body):
+	if body.name == "Player":
+		GameManager.changeTeste()
+func _on_painting_mouse_leave(body):
+	if body.name == "Player":
+		GameManager.changeTeste()
+func _on_painting_mouse_click(body):
+	if body.name == "Player":
+		GameManager.changeTeste()
+
 
 func _on_teste_body_entered(body):
 	if body.name == "Player":

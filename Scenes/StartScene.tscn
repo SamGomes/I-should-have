@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Textures/teste_madeira.jpg" type="Texture" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Textures/Backgrounds/ground-01.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/StartScene.gd" type="Script" id=5]
 [ext_resource path="res://Textures/blank.png" type="Texture" id=6]
 
@@ -35,7 +36,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0.565918, -18.4904 ), Vector2( 0, -10 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite/blank:modulate")
+tracks/2/path = NodePath("Sprite:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -44,24 +45,12 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 10 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
 resource_name = "FadeIn"
 length = 10.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite/blank:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.2, 9.9 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [sub_resource type="Animation" id=3]
 resource_name = "FadeOut"
@@ -86,12 +75,13 @@ func _ready():
 "
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 223.885, 210.758 )
+extents = Vector2( 63.8445, 210.758 )
 
 [node name="Start" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.176471, 0.101961, 0.101961, 1 )
 tile_set = ExtResource( 1 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 format = 1
@@ -118,7 +108,7 @@ scale = Vector2( 2, 2 )
 input_pickable = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 0.00398052, -10.0597 )
+position = Vector2( 0.131602, -11.9744 )
 scale = Vector2( -0.128919, 1.07136 )
 current = true
 limit_left = 0
@@ -133,7 +123,7 @@ position = Vector2( 286.051, 650.657 )
 scale = Vector2( 0.0856658, 0.0856658 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 620.803, 479.765 )
+position = Vector2( 192.704, 479.765 )
 shape = SubResource( 5 )
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -144,17 +134,23 @@ position = Vector2( 286.051, 650.657 )
 scale = Vector2( 0.0856658, 0.0856658 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 620.803, 479.765 )
+position = Vector2( 867.388, 483.19 )
 shape = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 0, 0, 0, 1 )
-
-[node name="blank" type="Sprite" parent="Sprite"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 628.555, 497.658 )
-rotation = -0.00404375
-scale = Vector2( 0.389727, 0.374474 )
+modulate = Color( 0, 0, 0, 0 )
 texture = ExtResource( 6 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -25.3242, 479.213 )
+rotation = 1.57079
+scale = Vector2( 1.96508, 15.7147 )
+texture = ExtResource( 4 )
+
+[node name="Background2" type="Sprite" parent="."]
+position = Vector2( 1199.98, 475.317 )
+rotation = 4.71238
+scale = Vector2( 1.96508, 15.7147 )
+texture = ExtResource( 4 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_start_trigger_enter"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_start_trigger_enter"]
