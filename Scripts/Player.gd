@@ -11,17 +11,25 @@ onready var sprite = $AnimatedSprite
 var y_velo = 0
 var facing_right = false
 
+var inputEnabled = true
+
+func disable_input():
+	inputEnabled = false
+func enable_input():
+	inputEnabled = true
 
 func _physics_process(delta):
+	if(!inputEnabled):
+		play_anim("idle")
+		return
 	var move_dir = 0
-	if Input.is_action_pressed("move_right"):
-		move_dir += 1
-	if Input.is_action_pressed("move_left"):
-		move_dir -= 1
-	
-	move_and_slide(Vector2(move_dir * MOVE_SPEED, y_velo), Vector2(0, -1))
 	
 	var grounded = is_on_floor()
+	if Input.is_action_pressed("move_right"):
+		move_dir += 1
+	elif Input.is_action_pressed("move_left"):
+		move_dir -= 1
+	
 	y_velo += GRAVITY
 	if grounded and Input.is_action_just_pressed("jump"):
 		y_velo = -JUMP_FORCE
@@ -29,6 +37,8 @@ func _physics_process(delta):
 		y_velo = 5
 	if y_velo > MAX_FALL_SPEED:
 		y_velo = MAX_FALL_SPEED
+	
+	move_and_slide(Vector2(move_dir * MOVE_SPEED, y_velo), Vector2(0, -1))
 	
 	if facing_right and move_dir < 0:
 		flip()
@@ -68,14 +78,26 @@ func _on_passage_1_2_0(body):
 func _on_passage_to_0_0_0(body):
 	if body.name == "Player":
 		GameManager.changeMemory(0,0,0)
-	
+		
 
-func _on_teste_body_entered(body):
-	if body.name == "Player":
-		GameManager.changeTeste()
-
-
-
+func _on_painting_mouse_enter():
+	print(get_path())
+	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(0.0,0.0,0.0)
+		
+func _on_painting_mouse_leave():
+	get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).modulate = Color(1.0,1.0,1.0)
+		
+func _on_painting_mouse_click(viewport, event, idx):
+	if (inputEnabled && event.is_pressed() and event.button_index == BUTTON_LEFT):
+		var camera = get_node(NodePath("/root/Hallway/Player/Camera2D"))
+		camera.get_parent().remove_child(camera) # error here  
+		get_node(NodePath("/root/Hallway/Background/Frame8/Sprite")).add_child(camera) 
+		var fadeOut = get_node(NodePath("/root/Hallway/FadeOut"))
+		fadeOut.play("Animation")
+		disable_input()
+		yield(get_tree().create_timer(fadeOut.get_current_animation_length()), "timeout") #wait() in GDscript
+		enable_input()
+		GameManager.changeMemory(1,0,0)
 
 
 
