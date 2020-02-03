@@ -7,8 +7,9 @@ The game contains several puzzles for the player to complete. The chosen develop
 
 ## Controls:
 
-Move: W/A/S/D
-Jump: Space
+Move: _W/A/S/D_
+
+Jump: _Space_
 
 ## Developers:
 
