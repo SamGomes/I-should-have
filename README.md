@@ -15,7 +15,7 @@ Jump: _Space_
 
 - André Silva - [@Andrefpvs](https://github.com/Andrefpvs)
 - Ariana Parrilha
-- Anna Holzner
+- Anna Unterholzner
 - Francisco Henriques Venda - [@ist173839](https://github.com/ist173839)
 - Mariana Ribeiro
 - Samuel Gomes - [@SamGomes](https://github.com/SamGomes)
