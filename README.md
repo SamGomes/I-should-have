@@ -5,7 +5,7 @@ The game contains several puzzles for the player to complete. The chosen develop
 
 ![screenshot](ReadmeImages/screenshot.png)
 
-# Controls:
+## Controls:
 
 Move: W/A/S/D
 Jump: Space
