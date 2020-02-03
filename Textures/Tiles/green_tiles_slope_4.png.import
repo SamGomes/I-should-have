@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blue_tiles.png-6fe26b3bc5305dc89cab71935ab38afd.stex"
+path="res://.import/green_tiles_slope_4.png-4befae275f5ce392ec3eba176d0ee0ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blue_tiles.png"
-dest_files=[ "res://.import/blue_tiles.png-6fe26b3bc5305dc89cab71935ab38afd.stex" ]
+source_file="res://Textures/Tiles/green_tiles_slope_4.png"
+dest_files=[ "res://.import/green_tiles_slope_4.png-4befae275f5ce392ec3eba176d0ee0ea.stex" ]
 
 [params]
 

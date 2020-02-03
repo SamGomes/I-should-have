@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green_tiles_slope_4.png-9bc4eca7416116ea2a5113a45d8f8131.stex"
+path="res://.import/platformer_tiles.png-2661a3c6a9a40c893cda6783a04220c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://green_tiles_slope_4.png"
-dest_files=[ "res://.import/green_tiles_slope_4.png-9bc4eca7416116ea2a5113a45d8f8131.stex" ]
+source_file="res://Textures/Tiles/platformer_tiles.png"
+dest_files=[ "res://.import/platformer_tiles.png-2661a3c6a9a40c893cda6783a04220c9.stex" ]
 
 [params]
 
